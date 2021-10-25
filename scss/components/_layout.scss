@@ -129,6 +129,15 @@ picture, iframe, figure{
 		transition: all var(--t);
 		position: relative;
 		padding-top: 140px;
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+
+		.page-content{
+			flex: auto;
+			display: flex;
+			flex-direction: column;
+		}
 	}
 
 	@media screen and (max-width: 991px){

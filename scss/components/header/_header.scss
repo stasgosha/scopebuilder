@@ -17,19 +17,13 @@
 		
 		.header-block{
 			padding: 0 15px;
+			min-height: 54px;
+			display: flex;
+			align-items: center;
 		}
 
-		@media screen and (max-width: 991px){
-			.header-block{
-				&.with-menu-opener{
-					display: flex;
-					align-items: center;
-
-					.menu-opener{
-						margin-right: 20px;
-					}
-				}
-			}
+		.menu-opener{
+			margin-right: 20px;
 		}
 
 		@media screen and (max-width: 575px){
@@ -39,12 +33,10 @@
 			
 			.header-block{
 				padding: 0 8px;
+			}
 
-				&.with-menu-opener{
-					.menu-opener{
-						margin-right: 16px;
-					}
-				}
+			.menu-opener{
+				margin-right: 16px;
 			}
 		}
 	}
