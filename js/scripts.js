@@ -4,7 +4,7 @@ $(function () {
 	var location = window.location.href;
 	var cur_url = location.split('/').pop();
 
-	$('.sidebar-nav li, .mobile-top-nav li, .footer-nav li').each(function () {
+	$('.sidebar-nav li, .page-nav li').each(function () {
 		var link = $(this).find('a').attr('href');
 
 		// console.log(link);
@@ -23,6 +23,13 @@ $(function () {
 
 
 document.addEventListener('DOMContentLoaded', function(){
+
+	setTimeout(function(){
+		$('.page-nav').each(function(i, el){
+			$(el).scrollLeft( $(el).find('.current-menu-item').eq(0).offset().left );
+		});
+	}, 200);
+
 	// Accordions
 	const toggleAccordion = (el) => {
 		let closeText = 'Close accordion';
@@ -291,7 +298,7 @@ let bodyScrolled = 0;
 function showModal(modal) {
 	$(modal).addClass('visible');
 	bodyScrolled = $(window).scrollTop();
-	$('body, .header').addClass('modal-visible')
+	$('body').addClass('modal-visible')
 		.scrollTop(bodyScrolled)
 		.css('padding-right', getScrollWidth());
 }
@@ -299,7 +306,7 @@ function showModal(modal) {
 function hideModal(modal) {
 	$(modal).removeClass('visible');
 	bodyScrolled = $(window).scrollTop();
-	$('body, .header').removeClass('modal-visible')
+	$('body').removeClass('modal-visible')
 		.scrollTop(bodyScrolled)
 		.css('padding-right', 0);
 }

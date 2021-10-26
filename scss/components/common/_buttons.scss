@@ -61,6 +61,11 @@
 		--btn-color: var(--primary);
 	}
 
+	&.btn-dark{
+		--btn-bg: var(--blue-900);
+		--btn-hover-bg: var(--blue-700);
+	}
+
 	&.btn-small{
 		min-height: 30px;
 		padding: 5px 15px;
