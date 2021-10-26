@@ -8,11 +8,11 @@
 	grid-template-columns: repeat(var(--columns), 1fr);
 	grid-gap: 18px;
 
-	@media screen and (max-width: 1699px){
+	@media screen and (max-width: 1860px){
 		--columns: 3;
 	}
 
-	@media screen and (max-width: 1329px){
+	@media screen and (max-width: 1319px){
 		--columns: 2;
 	}
 
@@ -69,7 +69,20 @@
 	.card-caption{
 		@include h3;
 		color: var(--text-dark);
-		margin-bottom: 10px;
+	}
+
+	.card-link{
+		margin-bottom: 20px;
+		font-size: 14px;
+		line-height: 1.428;
+		font-weight: 500;
+		color: var(--primary);
+		display: inline-flex;
+
+		&:hover,
+		&:focus{
+			color: var(--blue-800);
+		}
 	}
 
 	.card-footer{
@@ -90,9 +103,40 @@
 				flex: auto;
 			}
 		}
+
+		@media screen and (max-width: 1199px){
+			flex-wrap: wrap;
+
+			.btn{
+				&:not(:last-child){
+					flex: auto;
+					margin-right: 10px;
+				}
+
+				&:nth-last-child(2){
+					margin-right: 0;
+				}
+
+				&:not(.icon-btn){
+					flex: auto;
+					width: 100%;
+					margin-top: 10px;
+				}
+			}
+		}
 	}
 
-	@media screen and (max-width: 374px){
+	@media screen and (max-width: 1599px){
 		--padding: 16px;
+
+		.card-image{
+			width: 44px;
+			height: 44px;
+
+			img{
+				width: 18px;
+				height: 18px;
+			}
+		}
 	}
 }

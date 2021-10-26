@@ -6,6 +6,7 @@
 	width: calc(100% - var(--sidebar-width));
 	top: 0;
 	transition: transform var(--t);
+	max-width: 1680px;
 
 	.header-inner{
 		display: flex;
@@ -41,7 +42,11 @@
 		}
 	}
 
-	@media screen and (max-width: 991px){
+	@media screen and (max-width: 1599px){
+		padding: 28px 0;
+	}
+
+	@media screen and (max-width: 1199px){
 		padding: 13px 0;
 		position: fixed;
 		left: 0;

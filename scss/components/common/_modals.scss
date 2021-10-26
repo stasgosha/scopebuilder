@@ -18,8 +18,12 @@
 
 	.modal-dialog{
 		width: calc(100% - 15px * 2);
-		max-width: 1170px;
-		margin: 70px auto;
+		max-width: 536px;
+		margin: 30px auto;
+		height: calc(100vh - 30px * 2);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		cursor: default;
 		flex: none;
 		position: relative;
@@ -28,6 +32,10 @@
 		visibility: hidden;
 		transition: all var(--t);
 		transition-delay: .2s;
+
+		@media screen and (max-width: 575px){
+			height: auto;
+		}
 	}
 
 	&.visible{
@@ -89,37 +97,94 @@
 		background: #fff;
 		border-radius: var(--r);
 		position: relative;
-		padding: 60px 100px;
+		padding: 30px;
+
+		@media screen and (max-width: 479px){
+			padding: 20px;
+		}
 	}
 
-	.modal-text{
+	--modal-gap: 30px;
+
+	@media screen and (max-width: 1599px){
+		--modal-gap: 20px;
+	}
+
+	.modal-caption{
 		text-align: center;
-	}
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: var(--modal-gap);
 
-	&.small{
-		.modal-dialog{
-			max-width: 420px;
+		&:last-child{
+			margin-bottom: 0;
 		}
 
-		.modal-content{
-			padding: 40px 50px 50px;
+		.mc-icon{
+			width: 80px;
+			height: 80px;
+			background: var(--blue-100);
+			border-radius: 50%;
+			margin-bottom: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
-			@media screen and (max-width: 575px){
-				padding: 40px 30px 50px;
+			img{
+				width: 24px;
+				height: 24px;
+				display: block;
+				object-fit: contain;
+				object-position: center center;
+			}
+		}
+
+		.mc-title{
+			@include h1;
+			color: var(--text-dark);
+		}
+
+		.mc-subtitle{
+			font-size: 16px;
+			line-height: 1.25;
+			margin-top: 10px;
+
+			@media screen and (max-width: 1599px){
+				font-size: 14px;
 			}
 		}
 	}
 
-	@media screen and (max-width: 1229px){
-		.modal-content{
-			padding: 40px 30px;
+	.modal-form{
+		margin-bottom: var(--modal-gap);
+
+		&:last-child{
+			margin-bottom: 0;
 		}
 	}
 
-	@media screen and (max-width: 575px){
-		.modal-content{
-			padding-left: 20px;
-			padding-right: 20px;
+	.modal-footer{
+		display: flex;
+
+		.btn{
+			flex: auto;
+			flex-basis: 100%;
+
+			&:not(:last-child){
+				margin-right: 15px;
+			}
+		}
+
+		@media screen and (max-width: 479px){
+			flex-direction: column-reverse;
+
+			.btn{
+				&:not(:last-child){
+					margin-right: 0;
+					margin-top: 10px;
+				}
+			}
 		}
 	}
 }

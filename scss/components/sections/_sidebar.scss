@@ -21,6 +21,14 @@
 		}
 	}
 
+	@media screen and (max-width: 1599px){
+		padding: 24px;
+
+		.sidebar-section{
+			margin-bottom: 40px;
+		}
+	}
+
 	@media screen and (max-width: 374px){
 		padding: 20px;
 	}
@@ -50,6 +58,23 @@
 	.user-name{
 		font-size: 20px;
 		line-height: 1.2;
+	}
+
+	@media screen and (max-width: 1599px){
+		grid-template-columns: 60px 1fr;
+
+		.user-avatar{
+			padding: 8px;
+
+			img{
+				width: 44px;
+				height: 44px;
+			}
+		}
+
+		.user-name{
+			font-size: 18px;
+		}
 	}
 }
 
@@ -81,6 +106,16 @@
 				&:focus{
 					outline: none;
 					background: var(--blue-900);
+				}
+
+				@media screen and (max-width: 1599px){
+					padding: 12px;
+
+					.link-icon{
+						width: 20px;
+						height: 20px;
+						margin-right: 12px;
+					}
 				}
 			}
 

@@ -3,6 +3,10 @@
 	flex: auto;
 	display: flex;
 
+	&.no-top-padding{
+		padding-top: 0;
+	}
+
 	.container{
 		display: flex;
 		flex-direction: column;
@@ -14,6 +18,14 @@
 		background: #fff;
 		border-radius: var(--r) var(--r) 0 0;
 		flex: auto;
+	}
+
+	@media screen and (max-width: 1599px){
+		padding-top: 0;
+
+		.section-inner{
+			padding: 20px;
+		}
 	}
 
 	@media screen and (max-width: 991px){

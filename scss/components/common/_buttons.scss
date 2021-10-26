@@ -55,9 +55,41 @@
 		}
 	}
 
+	&.btn-light{
+		--btn-bg: var(--blue-100);
+		--btn-hover-bg: var(--blue-200);
+		--btn-color: var(--primary);
+	}
+
+	&.btn-small{
+		min-height: 30px;
+		padding: 5px 15px;
+		font-size: 12px;
+	}
+
 	&.icon-btn{
 		padding-left: 15px;
 		padding-right: 15px;
+	}
+
+	@media screen and (max-width: 1900px){
+		padding: 10px 15px;
+	}
+
+	@media screen and (max-width: 1599px){
+		padding: 8px 15px;
+		min-height: 44px;
+
+		.btn-icon{
+			width: 18px;
+			height: 18px;
+		}
+
+		&.icon-btn{
+			padding-left: 8px;
+			padding-right: 8px;
+			min-width: 44px;
+		}
 	}
 
 	@media screen and (max-width: 374px){

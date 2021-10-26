@@ -86,12 +86,16 @@ picture, iframe, figure{
 
 	--sidebar-width: 350px;
 
-	@media screen and (max-width: 1329px){
+	@media screen and (max-width: 1599px){
 		--sidebar-width: 270px;
 	}
 
-	@media screen and (max-width: 374px){
+	@media screen and (max-width: 1329px){
 		--sidebar-width: 240px;
+	}
+
+	@media screen and (max-width: 374px){
+		--sidebar-width: 220px;
 	}
 
 	.page-sidebar{
@@ -132,6 +136,7 @@ picture, iframe, figure{
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
+		max-width: 1680px;
 
 		.page-content{
 			flex: auto;
@@ -140,7 +145,13 @@ picture, iframe, figure{
 		}
 	}
 
-	@media screen and (max-width: 991px){
+	@media screen and (max-width: 1599px){
+		.page-main{
+			padding-top: 110px;
+		}
+	}
+
+	@media screen and (max-width: 1199px){
 		padding-left: 0;
 
 		.page-sidebar{
