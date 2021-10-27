@@ -413,6 +413,27 @@
 		</div>
 	</div>
 
+	<div class="modal" id="remove-project-modal" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<button class="modal-close" aria-label="Close modal"></button>
+
+				<div class="modal-caption">
+					<div class="mc-icon">
+						<img src="img/icons/trash.svg" alt="">
+					</div>
+					<h3 class="mc-title">Delete Project</h3>
+					<p class="mc-subtitle">Are you sure you wish to delete this project? This action will&nbsp;remove the project and can not be undone.</p>
+				</div>
+
+				<div class="modal-footer">
+					<button class="btn btn-light js-modal-close">Cancel</button>
+					<button class="btn">Delete Project</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="modal" id="new-project-invitation-modal" tabindex="-1">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -430,9 +451,9 @@
 					<form action="">
 						<div class="form-fields">
 							<div class="form-field">
-								<div class="input-field">
+								<div class="input-field disabled">
 									<div class="field-label">Generated URL</div>
-									<input type="url" value="https://www.lumi.com/newproject">
+									<input type="url" value="https://www.lumi.com/newproject" disabled>
 								</div>
 							</div>
 

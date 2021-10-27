@@ -71,6 +71,13 @@ document.addEventListener('DOMContentLoaded', function(){
 	});
 
 	// Forms
+	$('.form .input-field').each(function(i, el){
+		$(el).click(function(e){
+			if (!$(e.target).is('a, input, textarea, select')) {
+				$(el).find('input').focus();
+			}
+		});
+	});
 	// $('.form .select-field select').change(function(){
 	// 	$(this).addClass('selected'); // .find('.hideme').remove();
 	// });
@@ -299,8 +306,13 @@ function showModal(modal) {
 	$(modal).addClass('visible');
 	bodyScrolled = $(window).scrollTop();
 	$('body').addClass('modal-visible')
-		.scrollTop(bodyScrolled)
-		.css('padding-right', getScrollWidth());
+		.scrollTop(bodyScrolled);
+
+	const body = document.querySelector('body');
+
+	if (body.clientHeight < body.scrollHeight) {
+		$('body').css('padding-right', getScrollWidth());
+	}
 }
 
 function hideModal(modal) {

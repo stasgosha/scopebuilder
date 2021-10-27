@@ -204,6 +204,7 @@
 	background: transparent;
 	border: 0;
 	cursor: pointer;
+	display: none !important;
 
 	&:before,
 	&:after{

@@ -5,6 +5,7 @@
 		background: #fff;
 		border: 1px solid #E8E8E8;
 		transition: all var(--t);
+		cursor: pointer;
 
 		.field-label{
 			font-size: 12px;
@@ -12,6 +13,7 @@
 			margin-bottom: 10px;
 			font-weight: 500;
 			color: #8C8C8C;
+			cursor: pointer;
 		}
 
 		input{
@@ -23,8 +25,10 @@
 			font-family: inherit;
 			color: var(--text-dark);
 			font-size: 16px;
-			line-height: 1.2;
+			line-height: 1.4;
 			background: transparent;
+			width: 100%;
+			display: block;
 
 			&:focus{
 				outline: none;
@@ -32,7 +36,31 @@
 		}
 
 		&:focus-within{
+			border-color: var(--primary);
+		}
+
+		&.disabled{
 			background: #FAFAFA;
+			pointer-events: none;
+		}
+
+		&.password-field{
+			position: relative;
+
+			.forgot-link{
+				font-size: 12px;
+				line-height: 14px;
+				font-weight: 500;
+				color: var(--primary);
+				position: absolute;
+				right: 20px;
+				top: 20px;
+
+				&:hover,
+				&:focus{
+					color: var(--blue-800);
+				}
+			}
 		}
 
 		@media screen and (max-width: 1599px){
@@ -44,6 +72,13 @@
 
 			input{
 				font-size: 14px;
+			}
+
+			&.password-field{
+				.forgot-link{
+					right: 16px;
+					top: 16px;
+				}
 			}
 		}
 	}
