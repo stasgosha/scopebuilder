@@ -9,23 +9,29 @@
 
 	.page-logo{
 		position: absolute;
-		left: 140px;
+		left: 80px;
 		top: 40px;
 
 		img{
-			height: 60px;
+			height: 36px;
 			width: auto;
 			display: block;
 		}
 	}
 
+	@media screen and (min-width: 1920px){
+		.page-logo{
+			left: calc(50% - 1920px / 2 + 80px);
+		}
+	}
+
 	@media screen and (max-height: 750px){
-		padding: 110px 15px 70px;
+		padding: 100px 15px 70px;
 		display: block;
 	}
 
 	@media screen and (max-width: 1599px){
-		padding: 110px 15px 70px;
+		padding: 100px 15px 70px;
 		display: block;
 
 		.page-logo{

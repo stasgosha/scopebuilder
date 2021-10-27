@@ -189,8 +189,11 @@
 }
 
 .page-tab{
-	padding-top: 30px;
 	margin-bottom: 30px;
+
+	&:not(:first-child){
+		padding-top: 30px;
+	}
 
 	.tab-content{
 		display: grid;

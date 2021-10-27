@@ -74,10 +74,30 @@ document.addEventListener('DOMContentLoaded', function(){
 	$('.form .input-field').each(function(i, el){
 		$(el).click(function(e){
 			if (!$(e.target).is('a, input, textarea, select')) {
-				$(el).find('input').focus();
+				$(el).find('input, textarea, select').focus();
 			}
 		});
 	});
+
+	$('.form .field-allowed-count').closest('.input-field').each(function(i, el){
+		const textarea = $(el).find('textarea');
+		const allowedField = $(el).find('.field-allowed-count');
+		const max = +allowedField.data('max');
+
+		allowedField.text(textarea.val().length + ' / ' + max);
+
+		textarea.on('keyup change', function(){
+			const length = textarea.val().length;
+			allowedField.text(length + ' / ' + max);
+
+			if (length > max) {
+				allowedField.addClass('error');
+			} else{
+				allowedField.removeClass('error');
+			}
+		});
+	});
+
 	// $('.form .select-field select').change(function(){
 	// 	$(this).addClass('selected'); // .find('.hideme').remove();
 	// });

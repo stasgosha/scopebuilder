@@ -6,6 +6,7 @@
 		border: 1px solid #E8E8E8;
 		transition: all var(--t);
 		cursor: pointer;
+		position: relative;
 
 		.field-label{
 			font-size: 12px;
@@ -16,7 +17,8 @@
 			cursor: pointer;
 		}
 
-		input{
+		input,
+		textarea{
 			appearance: none;
 			padding: 0;
 			border: 0;
@@ -25,13 +27,34 @@
 			font-family: inherit;
 			color: var(--text-dark);
 			font-size: 16px;
-			line-height: 1.4;
+			line-height: 1.25;
 			background: transparent;
 			width: 100%;
 			display: block;
 
 			&:focus{
 				outline: none;
+			}
+		}
+
+		textarea{
+			height: 80px;
+			resize: none;
+			margin-bottom: 23px;
+		}
+
+		.field-allowed-count{
+			position: absolute;
+			white-space: nowrap;
+			right: 20px;
+			bottom: 20px;
+			font-size: 12px;
+			line-height: 14px;
+			font-weight: 500;
+			transition: all var(--t);
+
+			&.error{
+				color: var(--red);
 			}
 		}
 
@@ -45,8 +68,6 @@
 		}
 
 		&.password-field{
-			position: relative;
-
 			.forgot-link{
 				font-size: 12px;
 				line-height: 14px;
@@ -70,8 +91,14 @@
 				margin-bottom: 8px;
 			}
 
-			input{
+			input,
+			textarea{
 				font-size: 14px;
+			}
+
+			textarea{
+				line-height: 16px;
+				height: calc(16px * 5);
 			}
 
 			&.password-field{
@@ -79,6 +106,11 @@
 					right: 16px;
 					top: 16px;
 				}
+			}
+
+			.field-allowed-count{
+				right: 16px;
+				bottom: 16px;
 			}
 		}
 	}
