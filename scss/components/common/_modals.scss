@@ -158,6 +158,35 @@
 		}
 	}
 
+	.big-modal-icon{
+		margin: 60px auto;
+		width: 240px;
+		height: 240px;
+		background: var(--blue-100);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img{
+			width: 84px;
+			height: 84px;
+			display: block;
+			object-fit: contain;
+			object-position: center center;
+		}
+
+		@media screen and (max-width: 1599px){
+			width: 140px;
+			height: 140px;
+
+			img{
+				width: 54px;
+				height: 54px;
+			}
+		}
+	}
+
 	.modal-form{
 		margin-bottom: var(--modal-gap);
 
