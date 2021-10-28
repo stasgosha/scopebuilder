@@ -131,15 +131,8 @@
 				margin-bottom: 8px;
 			}
 
-			input,
-			select,
 			textarea{
-				font-size: 14px;
-			}
-
-			textarea{
-				line-height: 16px;
-				height: calc(16px * 5);
+				height: calc(18px * 5);
 			}
 
 			&.password-field{
