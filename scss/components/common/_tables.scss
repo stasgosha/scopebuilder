@@ -105,5 +105,9 @@
 		&:before{
 			background: var(--blue-600);
 		}
+
+		.btn-icon{
+			filter: contrast(2);
+		}
 	}
 }

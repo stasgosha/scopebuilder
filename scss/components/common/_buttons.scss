@@ -76,6 +76,13 @@
 	&.icon-btn{
 		padding-left: 15px;
 		padding-right: 15px;
+
+		&:hover,
+		&:focus{
+			.btn-icon{
+				filter: contrast(2);
+			}
+		}
 	}
 
 	@media screen and (max-width: 1900px){
