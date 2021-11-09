@@ -11,9 +11,6 @@ data/
 prepros-6.config
 prepros.config
 
-css/main.css
-css/main.css.map
-
 css/components/
 
 # Compiled Java class files
